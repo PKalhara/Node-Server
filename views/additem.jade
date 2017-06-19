@@ -1,0 +1,21 @@
+html
+	head
+		title="Register"
+	body
+		
+		div(style="margin-left:500px;") 
+			h1 Add Item
+		div(style="margin-left:500px;") 
+			form(method="POST", action="/addItemM") 
+				div
+					label(for='no') Item No:
+					input#itemno(type='text', placeholder='Item No' name='itemno')
+				div
+					label(for='name') Item No:
+					input#name(type='text', placeholder='Name' name='name')
+				div
+					label(for='quantity') Item No:
+					input#quantity(type='text', placeholder='quantity' name='quantity')
+				button(type='submit') ADD
+			
+							

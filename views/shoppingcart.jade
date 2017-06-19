@@ -1,0 +1,36 @@
+html
+	head
+		title="Shopping Cart"
+	body
+		h2(style="margin-left:500px") Cart Items
+		button(onClick='add()' style="margin-left:500px") Add
+		table(style="margin-left:500px" border='1')
+			thead
+				tr
+					th Item No
+					th Item Name
+					th Quantity
+					th Action
+			tbody
+				each item in items
+					tr
+						td=item.itemno
+						td=item.name
+						td=item.quantity
+						td
+							button(type='submit', onClick='delete1("#{item.itemno}")') Delete
+		script.
+			function delete1(d){
+				var val = confirm("Do you want to delete the record?");
+				if(val == true) {
+					window.location.href='/removeStudent/'+d;
+					return true;
+				}
+				else{
+					return false;
+				}
+			};
+			function add(){
+				window.location.href='/additem';
+			};
+					
